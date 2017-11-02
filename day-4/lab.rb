@@ -1,35 +1,42 @@
-#pizza_delivery.rb
 
-done = false
+class PizzaMenu
 
-puts "Hello, welcome to our pizza express delivery"
+  attr_accessor :id, :pizzas
 
-#this will run until done is set to true
-while not done
-  puts "What can I do for you?"
-  puts "1: Order a pizza"
-  puts "2: Nothing"
-  puts "------------------------------"
+    def initialize (id, pizzas = [])
+      @id = id
+      @pizzas = pizzas
+    end
 
-  #get some input from the customer
-  choice = gets.chomp.to_i
-  case choice
-    when 1
-      puts "Let me show you the menu"
-    when 2
-      done = true
-    else
-      puts "I dont understand"
+ def print_details_method
+      puts @name
+      puts @secrets.join(" , ")
+      puts "Amount of secrest: #{@secrets.length}"
+    end
+
+    def secret (secrets)
+      @secrets << secrets
+    end
+
+    def make (dishes)
+      @dishes << make››
+    end
+
   end
 
-  #say goodbye if the customer is leaving
-  if done
-    puts "Thank you for your visit! hope to see you again soon."
-    puts "   __"
-    puts " // \"\"--.._"
-    puts "||  (_)  _ \"-._"
-    puts "||    _ (_)    '-."
-    puts "||   (_)   __..-'"
-    puts " \\__..--\"\""
-  end
-end
+
+
+  pizza_1 =Cook.new('Peter P. Pendergrass', ["No dish is complete without sugar", "Parsley adds taste to anything"], )
+  pizza_2 =Cook.new('Patricia Klassen', ["Cream makes everything better"], )
+  pizza_3 =Cook.new('Pamela M. Fiscus', ["Heat your food as little as possible"], )
+
+  
+
+  shef_5.secret("The secret ingredient is always love")
+  shef_5.make("sandwich")
+
+  shef_1.print_details_method
+  shef_2.print_details_method
+  shef_3.print_details_method
+  shef_4.print_details_method
+  shef_5.print_details_method
