@@ -1,28 +1,27 @@
 
-class PizzaMenu
+# Tell the Menu class about the Pizza class
+#menu.rb
+require_relative "pizzatype.rb"
 
-  attr_accessor :id, :pizzas
+class Menu
+  attr_accessor :pizzas
 
-    def initialize (id, pizzas)
-      @id = id
-      @pizzas = pizzas
-    end
-
-    def print_details_method
-      puts @id
-      puts @pizzas
-    end
-
-
+  def initialize
+    @pizzas = []
+    @pizzas << Pizza.new(101, "Verdure", "Homemade grilled vegetables and fresh mushrooms on tomato sauce and mozzarella.", 9)
+    @pizzas << Pizza.new(102, "Margherita", "Homemade tomato sauce and mozzarella.", 8)
+    @pizzas << Pizza.new(103, "Tonno", "Tuna and red onions on homemade tomato sauce and mozzarella.", 11)
+    @pizzas << Pizza.new(104, "Diavolo", "Spicy salsicca sausage, fresh bell pepper and red onions on homemade tomato sauce and mozzarella.", 8)
+    @pizzas << Pizza.new(105, "Calzone", "Spicy salsicca sausage, Italian ham and fresh mushrooms on homemade tomato sauce and mozzarella.", 9)
+    @pizzas << Pizza.new(106, "Americana", "Spicy pepperoni salami and tangy salsiccia sausage on homemade tomato sauce with mozzarella.", 9)
   end
 
-  pizza_1 =Cook.new(101, "Verdure")
-  pizza_2 =Cook.new(102, "Margarita")
-  pizza_3 =Cook.new(103, "Tonno")
+  def print
+   puts "We have on our menu:"
 
-  shef_5.secret("The secret ingredient is always love")
-  shef_5.make("sandwich")
+   @pizzas.each do |pizza|
+     puts "#{pizza.number}: #{pizza.name} - #{pizza.ingredients}"
+   end
+ end
 
-  pizza_1.print_details_method
-  pizza_2.print_details_method
-  pizza_3.print_details_method
+end
