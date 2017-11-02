@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none; /* remove underline from links */
+}
+
+header {
+  max-width: 940px;
+  width: 100%; /* will try to take up the full width */
+  margin: 0 auto;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+header nav li {
+  margin-left: 20px;
+}
+
+header h1 a {
+  color: #4A4A4A;
+}
+
+header nav a {
+  color: #f5b723;
+}
